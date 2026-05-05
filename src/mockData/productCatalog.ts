@@ -1,0 +1,205 @@
+// Central product catalog — real brands, Unsplash product photos
+const U = (id: string) =>
+  `https://images.unsplash.com/photo-${id}?w=200&h=200&fit=crop&auto=format&q=80`;
+
+export interface CatalogProduct {
+  id: string;
+  name: string;
+  brand: string;
+  category: string;
+  type: 'skincare' | 'makeup';
+  tags: string[];
+  price: number;
+  currency: string;
+  score: number;
+  image: string;
+}
+
+export const productCatalog: CatalogProduct[] = [
+  // ── Skincare ──────────────────────────────────────────────────────────────
+  {
+    id: 'cerave-cleanser',
+    name: 'Hydrating Cleanser',
+    brand: 'CeraVe',
+    category: 'Cleanser',
+    type: 'skincare',
+    tags: ['Face', '236 ml'],
+    price: 9.90,
+    currency: '€',
+    score: 8.5,
+    image: U('1556228453-efd6c1ff04f6'),
+  },
+  {
+    id: 'ordinary-niacinamide',
+    name: 'Niacinamide 10% + Zinc 1%',
+    brand: 'The Ordinary',
+    category: 'Serum',
+    type: 'skincare',
+    tags: ['Face', '30 ml'],
+    price: 7.90,
+    currency: '€',
+    score: 6.2,
+    image: U('1620916566398-39f1143ab7be'),
+  },
+  {
+    id: 'lrp-cicaplast',
+    name: 'Cicaplast Baume B5',
+    brand: 'La Roche-Posay',
+    category: 'Moisturiser',
+    type: 'skincare',
+    tags: ['Face & Body', '100 ml'],
+    price: 12.90,
+    currency: '€',
+    score: 9.0,
+    image: U('1598440947619-2c35fc9aa908'),
+  },
+  {
+    id: 'lrp-anthelios',
+    name: 'Anthelios UVMune 400 SPF 50+',
+    brand: 'La Roche-Posay',
+    category: 'Sunscreen',
+    type: 'skincare',
+    tags: ['Face', '50 ml'],
+    price: 24.90,
+    currency: '€',
+    score: 8.8,
+    image: U('1571781926291-c477ebfd024b'),
+  },
+  {
+    id: 'paulas-bha',
+    name: 'Skin Perfecting 2% BHA Liquid',
+    brand: "Paula's Choice",
+    category: 'Exfoliant',
+    type: 'skincare',
+    tags: ['Face', '118 ml'],
+    price: 34.00,
+    currency: '€',
+    score: 8.9,
+    image: U('1607346256693-f45d6a8ad044'),
+  },
+  {
+    id: 'cosrx-snail',
+    name: 'Advanced Snail 96 Mucin Power Essence',
+    brand: 'COSRX',
+    category: 'Essence',
+    type: 'skincare',
+    tags: ['Face', '100 ml'],
+    price: 22.00,
+    currency: '€',
+    score: 8.4,
+    image: U('1611080626903-33c73b9a36c8'),
+  },
+  {
+    id: 'cerave-moisturiser',
+    name: 'Moisturising Cream',
+    brand: 'CeraVe',
+    category: 'Moisturiser',
+    type: 'skincare',
+    tags: ['Face & Body', '340 g'],
+    price: 14.90,
+    currency: '€',
+    score: 8.6,
+    image: U('1556228578-8c89e6adf883'),
+  },
+  {
+    id: 'ordinary-azelaic',
+    name: 'Azelaic Acid Suspension 10%',
+    brand: 'The Ordinary',
+    category: 'Treatment',
+    type: 'skincare',
+    tags: ['Face', '30 ml'],
+    price: 8.50,
+    currency: '€',
+    score: 9.1,
+    image: U('1540555700478-4be290a1f41c'),
+  },
+  {
+    id: 'avene-water',
+    name: 'Thermal Spring Water Spray',
+    brand: 'Avène',
+    category: 'Mist',
+    type: 'skincare',
+    tags: ['Face', '150 ml'],
+    price: 8.00,
+    currency: '€',
+    score: 9.0,
+    image: U('1535585209-fd1a8b9d4e0c'),
+  },
+  // ── Makeup ────────────────────────────────────────────────────────────────
+  {
+    id: 'nars-concealer',
+    name: 'Radiant Creamy Concealer',
+    brand: 'NARS',
+    category: 'Concealer',
+    type: 'makeup',
+    tags: ['Face', '6 ml'],
+    price: 31.00,
+    currency: '€',
+    score: 7.8,
+    image: U('1522335789-d472550a3e80'),
+  },
+  {
+    id: 'nars-foundation',
+    name: 'Soft Matte Complete Foundation',
+    brand: 'NARS',
+    category: 'Foundation',
+    type: 'makeup',
+    tags: ['Face', '30 ml'],
+    price: 47.00,
+    currency: '€',
+    score: 7.2,
+    image: U('1503236823255-94609f598e71'),
+  },
+  {
+    id: 'ct-primer',
+    name: 'Airbrush Flawless Primer',
+    brand: 'Charlotte Tilbury',
+    category: 'Primer',
+    type: 'makeup',
+    tags: ['Face', '30 ml'],
+    price: 38.00,
+    currency: '€',
+    score: 6.8,
+    image: U('1596462502278-27bfdc403348'),
+  },
+  {
+    id: 'benefit-mascara',
+    name: 'Roller Lash Curling Mascara',
+    brand: 'Benefit',
+    category: 'Mascara',
+    type: 'makeup',
+    tags: ['Eyes', '8.5 g'],
+    price: 29.00,
+    currency: '€',
+    score: 8.1,
+    image: U('1512496015851-cbca30dfef47'),
+  },
+  {
+    id: 'rare-blush',
+    name: 'Soft Pinch Liquid Blush',
+    brand: 'Rare Beauty',
+    category: 'Blush',
+    type: 'makeup',
+    tags: ['Cheeks', '7.5 ml'],
+    price: 23.00,
+    currency: '€',
+    score: 8.3,
+    image: U('1487239177913-0cf0e0e589e8'),
+  },
+  {
+    id: 'ilia-lippie',
+    name: 'Balmy Tint Hydrating Lip Balm',
+    brand: 'ILIA',
+    category: 'Lip',
+    type: 'makeup',
+    tags: ['Lips', '4.4 g'],
+    price: 26.00,
+    currency: '€',
+    score: 8.7,
+    image: U('1599305020479-9cde55013e66'),
+  },
+];
+
+export function getProduct(id: string) {
+  return productCatalog.find(p => p.id === id);
+}
